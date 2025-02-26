@@ -228,3 +228,28 @@ Function.prototype.myCall = function (curretContext = {}, ...arg) {
 purchaseCar.myCall(car3, '$', '3232');
 
 // Question 16 : Apply Method Polyfill
+Function.prototype.myApply = function (currentContext = {}, arg = []) {
+  if (typeof this !== 'function') {
+    throw new Error(this + "it's not callable");
+  }
+  if (!Array.isArray(arg)) {
+    throw new TypeError('CreateListFromArrayLike called on non-object');
+  }
+  currentContext.fn = this;
+  currentContext.fn(...arg);
+};
+purchaseCar.myApply(car2, ['₹', '50,00,000']);
+// Question 17 : Bind Method Polyfill
+
+Function.prototype.myBind = function (currentContext = {}, ...arg) {
+  if (typeof this !== 'function') {
+    throw new Error(this + "cannot be bound as it's not callable");
+  }
+  currentContext.fn = this;
+  return function () {
+    return currentContext.fn(...arg);
+  };
+};
+
+const initPurchaseBmw = purchaseCar.myBind(car1, '₹', '1,00,00,000');
+initPurchaseBmw();

@@ -1,5 +1,3 @@
-import React from 'react';
-
 const AppMapFilter = () => {
   const products = [
     { id: 1, name: 'Product A', price: 20, category: 'Electronics' },
@@ -72,8 +70,46 @@ const AppMapFilter = () => {
         .map((name) => {
           return <li>{name}</li>;
         })}
+      <h5>Question 6: Difference between && vs ||</h5>
+      <LogicalAnd />
+      <LogicalOr />
+      <h5>Question 7: Difference between .? vs ?? </h5>
+      <OptionalChaining />
+      <NullishCoalescing />
     </>
   );
 };
+const LogicalAnd = () => {
+  let x = 5;
+  let y = 10;
 
+  if (x > 0 && y > 0) {
+    return <p>Both are greater than 0</p>;
+  } else return <></>;
+};
+
+const LogicalOr = () => {
+  let isRaining = false;
+  let isSunny = true;
+  if (isRaining || isSunny) {
+    return <p>It's either raining or sunny (or both)!</p>;
+  } else <></>;
+};
+const NullishCoalescing = () => {
+  let userInput = null;
+  let defaultValue = 'Hello, default value!';
+
+  return <p>{userInput ?? defaultValue}</p>;
+};
+const OptionalChaining = () => {
+  let user = {
+    name: 'John',
+    // address: {
+    //   city: "New York",
+    // },
+  };
+
+  // return user && user.address && <p>{user.address.city}</p>;
+  return <p>{user?.address?.city}</p>;
+};
 export default AppMapFilter;

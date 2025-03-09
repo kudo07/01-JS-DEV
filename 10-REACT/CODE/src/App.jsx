@@ -4,7 +4,8 @@
 // import AppMapFilter from './4-MAP-FILTER-REDUCE/AppMapFilter';
 // import AppClass from './5-CLASS-FUNCITONAL/AppClass';
 // import AppStateProp from './6-STAT-PROP/AppStateProp';
-import AppTypes from './7-TYPES-COMPONENTS/AppTypes';
+// import AppTypes from './7-TYPES-COMPONENTS/AppTypes';
+import FormulaFetch from './0-REACT-FORMULA/1-FETCH-DEMO/FormulaFetch';
 
 function App() {
   // 1-REAL-REACT return <AppReal />;
@@ -13,7 +14,8 @@ function App() {
   // 4-map-filter-REDUCE return <AppMapFilter />;
   // 5-CLASS-FUNCTIONAL return <AppClass />;
   // 6-STATE-PROP return <AppStateProp />;
-  // 7-TYPES-OF-COMPONENTS
-  return <AppTypes />;
+  // 7-TYPES-OF-COMPONENTS return <AppTypes />;
+  // 0- 1-FETCH-DEMO
+  return <FormulaFetch />;
 }
 export default App;

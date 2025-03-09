@@ -5,7 +5,8 @@
 // import AppClass from './5-CLASS-FUNCITONAL/AppClass';
 // import AppStateProp from './6-STAT-PROP/AppStateProp';
 // import AppTypes from './7-TYPES-COMPONENTS/AppTypes';
-import FormulaFetch from './0-REACT-FORMULA/1-FETCH-DEMO/FormulaFetch';
+// import FormulaFetch from './0-REACT-FORMULA/1-FETCH-DEMO/FormulaFetch';
+import FormulaRandom from './0-REACT-FORMULA/2-RANDOM-JOKE/FormulaRandom';
 
 function App() {
   // 1-REAL-REACT return <AppReal />;
@@ -15,7 +16,8 @@ function App() {
   // 5-CLASS-FUNCTIONAL return <AppClass />;
   // 6-STATE-PROP return <AppStateProp />;
   // 7-TYPES-OF-COMPONENTS return <AppTypes />;
-  // 0- 1-FETCH-DEMO
-  return <FormulaFetch />;
+  // 0- 1-FETCH-DEMO return <FormulaFetch />;
+  // 0-2-RANDOM-JOKE
+  return <FormulaRandom />;
 }
 export default App;

@@ -226,14 +226,14 @@ Function.prototype.myCall = function (curretContext = {}, ...arg) {
   curretContext.fn(...arg);
 };
 purchaseCar.myCall(car3, '$', '3232');
-
+// this here is purchaseCar which is a function bound to car3 object
 // Question 16 : Apply Method Polyfill
 Function.prototype.myApply = function (currentContext = {}, args = []) {
   if (typeof this !== 'function') {
     throw new Error(this + 'it is not callable');
   }
   if (!Array.isArray(args)) {
-    throw new TyoeError('CreateListFromArrayLike called on non-object');
+    throw new TypeError('CreateListFromArrayLike called on non-object');
   }
   currentContext.fn = this;
   currentContext.fn(...args);

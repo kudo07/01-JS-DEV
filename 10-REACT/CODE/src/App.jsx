@@ -8,6 +8,7 @@
 // import FormulaFetch from './0-REACT-FORMULA/1-FETCH-DEMO/FormulaFetch';
 // import FormulaRandom from './0-REACT-FORMULA/2-RANDOM-JOKE/FormulaRandom';
 import FormulaStock from './0-REACT-FORMULA/3-STOCKS/FormulaStock';
+import UseStateHook from './8-HOOKS/1-USE-STATE/UseStateHook';
 
 function App() {
   // 1-REAL-REACT return <AppReal />;
@@ -19,7 +20,8 @@ function App() {
   // 7-TYPES-OF-COMPONENTS return <AppTypes />;
   // 0- 1-FETCH-DEMO return <FormulaFetch />;
   // 0-2-RANDOM-JOKE // return <FormulaRandom />;
-  // 0- 3-STOCKS
-  return <FormulaStock />;
+  // 0- 3-STOCKS return <FormulaStock />;
+  // 8-HOOKS 1-USESTATE
+  return <UseStateHook />;
 }
 export default App;

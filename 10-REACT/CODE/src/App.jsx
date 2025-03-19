@@ -10,6 +10,7 @@
 // import FormulaStock from './0-REACT-FORMULA/3-STOCKS/FormulaStock';
 // import UseStateHook from './8-HOOKS/1-USE-STATE/UseStateHook';
 import UseEffectHook from './8-HOOKS/2-USE-EFFECT/UseEffectHook';
+import Counter from './8-HOOKS/3-USEFFECT-POLLYFILL/Counter';
 
 function App() {
   // 1-REAL-REACT return <AppReal />;
@@ -23,7 +24,8 @@ function App() {
   // 0-2-RANDOM-JOKE // return <FormulaRandom />;
   // 0- 3-STOCKS return <FormulaStock />;
   // 8-HOOKS 1-USESTATE return <UseStateHook />;
-  // 8-HOOKS 2-USEEFFECT
-  return <UseEffectHook />;
+  // 8-HOOKS 2-USEEFFECT return <UseEffectHook />;
+  // 8-HOOKS 3-USEEFFECTPOLLYFILL
+  return <Counter />;
 }
 export default App;

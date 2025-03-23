@@ -12,6 +12,7 @@
 import UseEffectHook from './8-HOOKS/2-USE-EFFECT/UseEffectHook';
 import Counter from './8-HOOKS/3-USEFFECT-POLLYFILL/Counter';
 import UseRefHook from './8-HOOKS/4-USERREF/UseRefHook';
+import UseContextHook from './8-HOOKS/5-USECONTEXT/UseContextHook';
 
 function App() {
   // 0- 1-FETCH-DEMO return <FormulaFetch />;
@@ -27,7 +28,7 @@ function App() {
   // 8-HOOKS 1-USESTATE return <UseStateHook />;
   // 8-HOOKS 2-USEEFFECT return <UseEffectHook />;
   // 8-HOOKS 3-USEEFFECTPOLLYFILL return <Counter />;
-  // 8-HOOKS 4-USEREFHOK
-  return <UseRefHook />;
+  // 8-HOOKS 4-USEREFHOK return <UseRefHook />;
+  return <UseContextHook />;
 }
 export default App;

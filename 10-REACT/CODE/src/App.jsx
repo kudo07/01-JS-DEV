@@ -13,7 +13,7 @@ import UseEffectHook from './8-HOOKS/2-USE-EFFECT/UseEffectHook';
 import Counter from './8-HOOKS/3-USEFFECT-POLLYFILL/Counter';
 import UseRefHook from './8-HOOKS/4-USERREF/UseRefHook';
 import UseContextHook from './8-HOOKS/5-USECONTEXT/UseContextHook';
-import AppDarkLight from './8-HOOKS/DARK-LIGHT-EFFECT/AppDarkLight';
+import AppDarkLight from './8-HOOKS/6-DARK-LIGHT-EFFECT/AppDarkLight';
 
 function App() {
   // 0- 1-FETCH-DEMO return <FormulaFetch />;

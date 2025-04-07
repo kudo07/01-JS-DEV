@@ -321,3 +321,16 @@ console.log(personobj6); // -> ?
 // const objclone = Object.assign({}, obj);
 // const objclone = JSON.parse(JSON.stringify(employee));
 // const objclone = { ...obj };
+function updateSetting(settings) {
+  settings.preference.theme = 'dark';
+  settings = {
+    preference: { theme: 'light', language: 'fr' },
+    version: 2,
+  };
+}
+const userSettings = {
+  preference: { theme: 'light', language: 'en' },
+  version: 1,
+};
+updateSetting(userSettings);
+console.log(userSettings);

@@ -14,6 +14,7 @@ import Counter from './8-HOOKS/3-USEFFECT-POLLYFILL/Counter';
 import UseRefHook from './8-HOOKS/4-USERREF/UseRefHook';
 import UseContextHook from './8-HOOKS/5-USECONTEXT/UseContextHook';
 import AppDarkLight from './8-HOOKS/6-DARK-LIGHT-EFFECT/AppDarkLight';
+import UseReducerHook from './8-HOOKS/7-USEREDUCER-HOOK/UseReducerHook';
 
 function App() {
   // 0- 1-FETCH-DEMO return <FormulaFetch />;
@@ -31,7 +32,8 @@ function App() {
   // 8-HOOKS 3-USEEFFECTPOLLYFILL return <Counter />;
   // 8-HOOKS 4-USEREFHOK return <UseRefHook />;
   // 8-HOOKS 5-USECONTEXT return <UseContextHook />;
-  // 8-hooks 6-DARK-LIGHT-EFFECT
-  return <AppDarkLight />;
+  // 8-hooks 6-DARK-LIGHT-EFFECT return <AppDarkLight />;
+  // 8-HOOKS 7-USEREDUCERHOOK
+  return <UseReducerHook />;
 }
 export default App;

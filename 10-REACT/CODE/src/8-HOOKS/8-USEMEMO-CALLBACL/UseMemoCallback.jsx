@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 
 const UseMemoCallback = () => {
   const [counter, setCounter] = useState(0);
@@ -7,7 +7,7 @@ const UseMemoCallback = () => {
   // expensinve function`
 
   const squareValue = () => {
-    console.log('expensive calculation', counter2);
+    console.log('expensive calculation', counter);
     return counter * counter;
     // even click counter it still render
   };
@@ -26,6 +26,7 @@ const UseMemoCallback = () => {
       </h4>
       <h2>SQUARED COUNTER:{squaredValueUseMemo}</h2>
       <button onClick={() => setCounter(counter + 1)}>Inc</button>
+      <br />
       <button onClick={() => setCounter2(counter - 1)}> dec</button>
       <h5>Question 2: When should you use useMemo Hook?</h5>
       {/* 

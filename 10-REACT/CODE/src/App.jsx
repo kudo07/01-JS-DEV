@@ -9,12 +9,14 @@
 // import FormulaRandom from './0-REACT-FORMULA/2-RANDOM-JOKE/FormulaRandom';
 // import FormulaStock from './0-REACT-FORMULA/3-STOCKS/FormulaStock';
 // import UseStateHook from './8-HOOKS/1-USE-STATE/UseStateHook';
-import UseEffectHook from './8-HOOKS/2-USE-EFFECT/UseEffectHook';
-import Counter from './8-HOOKS/3-USEFFECT-POLLYFILL/Counter';
-import UseRefHook from './8-HOOKS/4-USERREF/UseRefHook';
-import UseContextHook from './8-HOOKS/5-USECONTEXT/UseContextHook';
-import AppDarkLight from './8-HOOKS/6-DARK-LIGHT-EFFECT/AppDarkLight';
-import UseReducerHook from './8-HOOKS/7-USEREDUCER-HOOK/UseReducerHook';
+// import UseEffectHook from './8-HOOKS/2-USE-EFFECT/UseEffectHook';
+// import Counter from './8-HOOKS/3-USEFFECT-POLLYFILL/Counter';
+// import UseRefHook from './8-HOOKS/4-USERREF/UseRefHook';
+// import UseContextHook from './8-HOOKS/5-USECONTEXT/UseContextHook';
+// import AppDarkLight from './8-HOOKS/6-DARK-LIGHT-EFFECT/AppDarkLight';
+// import UseReducerHook from './8-HOOKS/7-USEREDUCER-HOOK/UseReducerHook';
+import CounterWays from './8-HOOKS/8-USEMEMO-CALLBACL/CounterWays';
+import NoOptimisation from './8-HOOKS/8-USEMEMO-CALLBACL/CounterWays';
 import UseMemoCallback from './8-HOOKS/8-USEMEMO-CALLBACL/UseMemoCallback';
 
 function App() {
@@ -35,7 +37,7 @@ function App() {
   // 8-HOOKS 5-USECONTEXT return <UseContextHook />;
   // 8-hooks 6-DARK-LIGHT-EFFECT return <AppDarkLight />;
   // 8-HOOKS 7-USEREDUCERHOOK return <UseReducerHook />;
-  // 8-HOOKS 8-USEMEMOCALLBACK
-  return <UseMemoCallback />;
+  // 8-HOOKS 8-USEMEMOCALLBACK return <UseMemoCallback />;
+  // 8-HOOKS 8-USEMEMOCALLBACK return <CounterWays />;
 }
 export default App;

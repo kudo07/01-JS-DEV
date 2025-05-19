@@ -149,18 +149,18 @@ importActionPromise('coder')
 
 // 8
 // Promise Chaining
-importAction('Rad')
-  .then((res) => {
-    console.log(res);
-    return likeTheVideo('js');
-  })
-  .then((res) => {
-    console.log(res);
-    return shareTheVideo('wef');
-  })
-  .then((res) => {
-    console.log(res);
-  });
+// importAction('Rad')
+//   .then((res) => {
+//     console.log(res);
+//     return likeTheVideo('js');
+//   })
+//   .then((res) => {
+//     console.log(res);
+//     return shareTheVideo('wef');
+//   })
+//   .then((res) => {
+//     console.log(res);
+//   });
 // 9.
 // Promise Combinator
 // 9.1
@@ -255,3 +255,156 @@ const result = async () => {
 };
 
 result();
+// ----------> Interview Question
+
+// Question 1 : What is Output?
+console.log('start');
+const promise = new Promise((res, rej) => {
+  console.log(1);
+  res(2);
+});
+promise.then((res) => {
+  console.log(res);
+  // 2
+});
+console.log('end');
+const promise7 = new Promise((resolve, reject) => {
+  console.log(1);
+  resolve(2);
+  console.log(3);
+});
+
+promise7.then((res) => {
+  console.log(res);
+  // .2
+  // resolvve is not return
+});
+
+console.log('end');
+
+// Question 2 : What is Output?
+
+console.log('start');
+
+const promise9 = new Promise((res, rej) => {
+  console.log(1);
+  res(2);
+  console.log(3);
+});
+
+promise.then((res) => {
+  console.log(res);
+});
+
+console.log('end');
+// Question 3 : What is Output?
+
+console.log('start');
+const fn = () => {
+  new Promise((res, rej) => {
+    console.log(1);
+    res('suc');
+  });
+};
+console.log('middle');
+
+// fn.then((res) => {
+//   console.log(res);
+// });
+
+console.log('end');
+
+// Question 4 : What is Output?
+
+function job() {
+  return new Promise(function (res, rej) {
+    rej();
+  });
+}
+
+let promiseJob = job();
+
+promiseJob
+  .then(() => {
+    console.log('success 1');
+  })
+  .then(() => {
+    console.log('success 2');
+  })
+  .then(() => {
+    console.log('success 3');
+  })
+  .catch(() => {
+    console.log('error 1');
+  })
+  .then(() => {
+    console.log('suc4');
+  });
+// Step 3: What happens next?
+// After the .catch(...), the promise is considered handled. The .catch() doesn't rethrow the error — it resolves the promise.
+
+// So the next .then(...) receives a resolved state.
+
+// js
+// Copy
+// Edit
+// .then(() => {
+//   console.log('suc4'); // <-- This runs!
+// });
+// last then not run in the following example
+// if throw error then not run
+Promise.reject('initial error')
+  .catch((err) => {
+    console.log(err);
+    throw 'new error';
+    // in the case this is reject but also in reject
+    // in the above that is reject but still resolve as catch handles the error
+  })
+  .then(() => {
+    console.log('this will not run');
+  })
+  .catch((err) => {
+    console.log('final catch', err);
+  });
+// ['final catch', 'new error']
+// 'that throw value will pass from there catch block to here
+// Question 5 : What is Output?
+function job(state) {
+  return new Promise(function (resolve, reject) {
+    if (state) {
+      resolve('success');
+    } else {
+      reject('error');
+    }
+  });
+}
+
+let promiseJobOne = job(true);
+
+promiseJobOne
+  .then(function (data) {
+    console.log(data);
+
+    // become reject promise
+    return job(false);
+    // the promise chain is now reject state
+  })
+
+  .catch(function (error) {
+    console.log(error);
+    // rror
+
+    return 'Error caught';
+    // it handles and become the resolved state
+  })
+
+  .then(function (data) {
+    console.log(data);
+    //error caugh
+    //return a resolve a promise here
+    return job(true);
+  })
+
+  .catch(function (error) {
+    console.log(error);
+  });

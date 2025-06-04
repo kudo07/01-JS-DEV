@@ -368,6 +368,7 @@ Promise.reject('initial error')
   });
 // ['final catch', 'new error']
 // 'that throw value will pass from there catch block to here
+
 // Question 5 : What is Output?
 function job(state) {
   return new Promise(function (resolve, reject) {

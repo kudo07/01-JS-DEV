@@ -19,6 +19,7 @@ import CounterWays from './8-HOOKS/8-USEMEMO-CALLBACL/CounterWays';
 import NoOptimisation from './8-HOOKS/8-USEMEMO-CALLBACL/CounterWays';
 import UseMemoCallback from './8-HOOKS/8-USEMEMO-CALLBACL/UseMemoCallback';
 import CounterHooks from './9-CUSTOM-HOOKS/0-COUNTER/components/CounterHooks';
+import UseWindowComp from './9-CUSTOM-HOOKS/1-USEWINDOWSIZE/components/UseWindowComp';
 
 function App() {
   // 0- 1-FETCH-DEMO return <FormulaFetch />;
@@ -40,7 +41,8 @@ function App() {
   // 8-HOOKS 7-USEREDUCERHOOK return <UseReducerHook />;
   // 8-HOOKS 8-USEMEMOCALLBACK return <UseMemoCallback />;
   // 8-HOOKS 8-USEMEMOCALLBACK return <CounterWays />;
-  // 9-CUSTOM-HOOKS 0-COUNTER
-  return <CounterHooks />;
+  // 9-CUSTOM-HOOKS 0-COUNTER return <CounterHooks />;
+  // 9-CUSTOM-HOOKS 1-USEWINDOWSIZE
+  return <UseWindowComp />;
 }
 export default App;
